@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import CardPageContainer, {
   CardVariant,
 } from "./pages/CardPage/containers/CartPageContainer";
 import UserPageContainer from "./pages/UserPage/containers/UserPageContainer";
+import { IUser } from "./types";
 
 function App() {
+  const [users, setUsers] = useState<IUser[]>([]);
+
   return (
     <>
       <CardPageContainer
@@ -15,7 +18,7 @@ function App() {
       >
         <button>click me</button>
       </CardPageContainer>
-      <UserPageContainer users={} />
+      <UserPageContainer users={users} />
     </>
   );
 }

@@ -19,7 +19,7 @@ const CardPageContainer: FC<CardProps> = ({
   onClick,
   children,
 }) => {
-  const [state, setState] = useState(0);
+  const [state] = useState(0);
 
   return (
     <div
